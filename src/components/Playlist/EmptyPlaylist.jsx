@@ -19,7 +19,7 @@ const EmptyPlaylist = ({ playlistId }) => {
   const { randomTracks, likedSongs, loading } = useSelector(
     ({ playlists }) => playlists
   );
-
+  
   if (loading) return <Loader />;
 
   return (

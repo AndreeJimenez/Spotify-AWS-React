@@ -12,13 +12,6 @@ import Playlist from '../Playlists/Playlist';
 import LibraryPlaylists from '../Library/LibraryPlaylists';
 import Albums from '../Library/Albums';
 import Artists from '../Library/Artists';
-import Search from '../Search/Search';
-import ArtistSongs from '../Search/ArtistSongs';
-import ArtistAlbums from '../Search/ArtistAlbums';
-import RelatedArtists from '../Search/RelatedArtists';
-import Download from '../Download/Download';
-import Artist from '../Artist/Artist';
-import Album from '../Album/Album';
 import Track from '../Track/Track';
 import ModalsContextContainer from '../../components/ModalsContext/ModalsContextContainer';
 
@@ -49,26 +42,6 @@ export default () => (
             <Route path='/' component={Login} exact />
             <Route path='/app' component={Dashboard} exact />
             <Route path='/app/user/:name' component={User} exact />
-            <Route path='/app/search' component={Search} exact />
-            <AppRoute path='/app/artist/:id' component={Artist} />
-
-            <Route path='/app/album/:id' component={Album} exact />
-
-            <Route
-              path='/app/search/:name/albums'
-              component={ArtistAlbums}
-              exact
-            />
-            <Route
-              path='/app/search/:name/tracks'
-              component={ArtistSongs}
-              exact
-            />
-            <Route
-              path='/app/search/:name/artists'
-              component={RelatedArtists}
-              exact
-            />
             <Route path='/app/playlist/:id' component={Playlist} exact />
 
             <Route
@@ -84,7 +57,6 @@ export default () => (
               component={LibraryPlaylists}
               exact
             />
-            <Route path='/app/download' component={Download} exact />
             <Route
               path='*'
               component={() => <h1 style={{ color: 'red' }}>not found</h1>}

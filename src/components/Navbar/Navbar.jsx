@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import SearchInput from '../SearchInput/SearchInput';
 import { useSelector } from 'react-redux';
 import {
   NavContainer,
@@ -23,9 +22,7 @@ import LibraryMenu from '../LibraryMenu/LibraryMenu';
 const Navbar = () => {
   const { images, display_name } = useSelector(({ auth }) => auth.user);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { pathname } = useLocation();
   const history = useHistory();
-
   return (
     <NavContainer>
       <NavSubcontainer>
@@ -38,12 +35,6 @@ const Navbar = () => {
               <ArrowRight fill='#fff' width={22} height={22} />
             </ArrowIconContainer>
           </ArrowsContainer>
-          {pathname === '/app/search' && <SearchInput />}
-          {[
-            '/app/collection/playlists',
-            '/app/collection/albums',
-            '/app/collection/artists'
-          ].includes(pathname) && <LibraryMenu />}
         </NavLeftWrapper>
         <NavRightWrapper>
           <UserContainer onClick={() => setIsMenuOpen(!isMenuOpen)}>

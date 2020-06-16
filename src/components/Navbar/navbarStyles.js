@@ -78,8 +78,6 @@ export const ArrowIconContainer = styled.button`
       : null}
 `;
 
-// Right side
-
 export const UpgradeButton = styled.a`
   background-color: transparent;
   border-radius: 100px;
@@ -144,7 +142,6 @@ export const ArrowDownIconContainer = styled.div`
       : null}
 `;
 
-// prifile menu
 export const ProfileMenuContainer = styled.div`
   position: absolute;
   top: 100%;

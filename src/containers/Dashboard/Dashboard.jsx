@@ -26,7 +26,7 @@ const Dashboard = () => {
     message: 'Oooops something went wrong.'
   });
 
-  useTitle('Spotify - Clone');
+  useTitle('Spotify AWS');
 
   const {
       played,
@@ -71,65 +71,31 @@ const Dashboard = () => {
         ))}
       </LibraryItemsContainer>
       <SectionTitleContainer>
-        <SectionTitle>Country</SectionTitle>
+        <SectionTitle>Playlist Folders</SectionTitle>
       </SectionTitleContainer>
       <LibraryItemsContainer>
-        {recommendations.country &&
-          recommendations.country.map(({ name, id, album }, i) => (
-            <LibraryItem
-              key={i}
-              id={album.id}
-              title={name}
-              subtitle={album.artists[0].name}
-              cover={album.images[0].url}
-              type='album'
-            />
-          ))}
-      </LibraryItemsContainer>
-      <SectionTitleContainer>
-        <SectionTitle>Classical</SectionTitle>
-      </SectionTitleContainer>
-      <LibraryItemsContainer>
-        {recommendations.classical &&
-          recommendations.classical.map(({ name, id, album }, i) => (
-            <LibraryItem
-              key={i}
-              id={album.id}
-              title={name}
-              subtitle={album.artists[0].name}
-              cover={album.images[0].url}
-              type='album'
-            />
-          ))}
-      </LibraryItemsContainer>
-      <SectionTitleContainer>
-        <SectionTitle>Featured Playlists</SectionTitle>
-      </SectionTitleContainer>
-
-      <LibraryItemsContainer>
-        {featured.map(({ id, name, images, owner: { display_name } }, i) => (
+        {played.map(({ track }, i) => (
           <LibraryItem
             key={i}
-            id={id}
-            title={name}
-            subtitle={display_name}
-            cover={images[0].url}
-            type='playlist'
+            id={track.album.id}
+            title={track.name}
+            subtitle={track.artists[0].name}
+            cover={track.album.images[0].url}
+            type='album'
           />
         ))}
       </LibraryItemsContainer>
       <SectionTitleContainer>
-        <SectionTitle>New Releases</SectionTitle>
+        <SectionTitle>Favorite Songs</SectionTitle>
       </SectionTitleContainer>
-
       <LibraryItemsContainer>
-        {releases.map(({ id, name, images, artists }, i) => (
+        {played.map(({ track }, i) => (
           <LibraryItem
             key={i}
-            id={id}
-            title={name}
-            subtitle={artists[0].name}
-            cover={images[0].url}
+            id={track.album.id}
+            title={track.name}
+            subtitle={track.artists[0].name}
+            cover={track.album.images[0].url}
             type='album'
           />
         ))}
@@ -137,5 +103,4 @@ const Dashboard = () => {
     </>
   );
 };
-
 export default Dashboard;

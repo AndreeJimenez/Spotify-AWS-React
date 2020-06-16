@@ -23,7 +23,7 @@ import { ReactComponent as HeartIcon } from '../../assets/icons/heart.svg';
 import { ReactComponent as HeartOutlineIcon } from '../../assets/icons/heart-outline.svg';
 import { ReactComponent as MoreIcon } from '../../assets/icons/more.svg';
 import { ReactComponent as DefaultSong } from '../../assets/icons/defaultSong.svg';
-import MoreMenu from '../MoreMenu/MoreMenu';
+//import MoreMenu from '../MoreMenu/MoreMenu';
 import EmptyPlaylist from './EmptyPlaylist';
 import { useSelector } from 'react-redux';
 
@@ -37,8 +37,8 @@ const PlaylistContent = ({
   userId,
   inLibrary,
 }) => {
-  const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false);
-  const [moreMenuPosition, setMoreMenuPosition] = useState([0, 0]);
+  //const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false);
+  //const [moreMenuPosition, setMoreMenuPosition] = useState([0, 0]);
 
   const { likedSongs } = useSelector(({ playlists }) => playlists);
 
@@ -58,16 +58,16 @@ const PlaylistContent = ({
       }
     : { ...playlist };
 
-  const handleOnClickMore = e => {
+  /*const handleOnClickMore = e => {
     setIsMoreMenuOpen(true);
     setMoreMenuPosition([e.pageX, e.pageY]);
-  };
+  };*/
 
   const isMyPlaylist = playlistData?.owner?.id === userId;
 
   return (
     <>
-      <MoreMenu
+      {/*<MoreMenu
         open={isMoreMenuOpen}
         close={() => setIsMoreMenuOpen(false)}
         moreMenuPosition={moreMenuPosition}
@@ -80,7 +80,7 @@ const PlaylistContent = ({
             title: 'Copy playlist link',
           },
         ]}
-      />
+      />*/}
       <PlaylistLeftWrapper>
         <PlaylistHeader>
           <PlaylistHeaderSubcontainer>
@@ -143,8 +143,8 @@ const PlaylistContent = ({
                   </IconContainer>
                 ) : null}
                 <IconContainer
-                  onClick={handleOnClickMore}
-                  active={isMoreMenuOpen}
+                  //onClick={handleOnClickMore}
+                  //active={isMoreMenuOpen}
                 >
                   <MoreIcon fill='#fff' width={20} />
                 </IconContainer>

@@ -1,5 +1,5 @@
 {
-  "name": "spotify-clone",
+  "name": "spotify-aws",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -25,6 +25,7 @@
     "styled-components": "^5.0.1",
     "styled-normalize": "^8.0.7"
   },
+
   "scripts": {
     "start": "react-scripts start",
     "start:staging": "env-cmd -f .env.staging react-scripts start",

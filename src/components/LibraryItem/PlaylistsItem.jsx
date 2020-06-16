@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { Item, PlaylistItemText } from '../Sidebar/sidebarStyles';
-import MoreMenu from '../MoreMenu/MoreMenu';
+//import MoreMenu from '../MoreMenu/MoreMenu';
 import { followPlaylistStart } from '../../containers/Playlists/playlistsActions';
 
 const PlaylistsItem = ({ id, name, userId, owner }) => {
@@ -32,7 +32,7 @@ const PlaylistsItem = ({ id, name, userId, owner }) => {
 
   return (
     <>
-      <MoreMenu
+    {/*   <MoreMenu
         open={isMoreMenuOpen}
         close={() => setIsMoreMenuOpen(false)}
         moreMenuPosition={moreMenuPosition}
@@ -45,7 +45,7 @@ const PlaylistsItem = ({ id, name, userId, owner }) => {
             title: 'Copy playlist link',
           },
         ]}
-      />
+      />*/}
       <Item hasIcon={false}>
         <PlaylistItemText
           hasicon={0}

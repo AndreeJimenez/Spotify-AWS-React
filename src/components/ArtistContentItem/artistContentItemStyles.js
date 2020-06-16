@@ -29,7 +29,6 @@ export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
 `;
-
 export const Image = styled.img`
   height: 100%;
   width: 100%;
@@ -39,7 +38,6 @@ export const Image = styled.img`
   object-fit: cover;
   transition: all 0.3s cubic-bezier(0.3, 0, 0, 1);
 `;
-
 export const PlayIconContainer = styled.div`
   position: absolute;
   top: 50%;
@@ -59,7 +57,6 @@ export const PlayIconContainer = styled.div`
     transform: translateY(-50%) scale(1.06);
   }
 `;
-
 export const Title = styled.h3`
   ${EllipsisTwoLines}
   margin: .75rem 0 .25rem;

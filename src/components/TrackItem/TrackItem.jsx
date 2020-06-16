@@ -28,7 +28,7 @@ import { ReactComponent as MoreIcon } from '../../assets/icons/more.svg';
 import moment from 'moment';
 import { useDispatch, useSelector } from 'react-redux';
 import { startSong, pauseSong } from '../../containers/Track/trackActions';
-import MoreMenu from '../MoreMenu/MoreMenu';
+//import MoreMenu from '../MoreMenu/MoreMenu';
 import { UpgradeButton, UpgradeText } from '../Navbar/navbarStyles';
 import {
   likeSongStart,
@@ -95,7 +95,7 @@ const TrackItem = ({
 
   return (
     <>
-      <MoreMenu
+     {/* <MoreMenu
         open={isMoreMenuOpen}
         close={() => setIsMoreMenuOpen(false)}
         moreMenuPosition={moreMenuPosition}
@@ -129,7 +129,7 @@ const TrackItem = ({
               ),
           },
         ]}
-      />
+      />*/}
       <ItemContainer
         align={align}
         hasPadding={hasPadding}
