@@ -32,7 +32,7 @@ const Duration = React.forwardRef(
               })
             );
           else dispatch(pauseSong());
-          // end of queue
+
         } else if (isPlaying) setTimeElapsed(timeElapsed + 1);
       }, 1000);
       return () => clearInterval(interval);
@@ -74,5 +74,4 @@ const Duration = React.forwardRef(
     );
   }
 );
-
 export default React.memo(Duration);

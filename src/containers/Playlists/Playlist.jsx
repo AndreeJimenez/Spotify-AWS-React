@@ -5,10 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   getPlaylistStart,
   getUserTracksStart,
-  checkUserFollowPlaylistStart,
   followPlaylistStart,
-  getRandomTracksStart,
-  checkLikeSongStart,
   cleanPlaylist,
 } from './playlistsActions';
 import { PlaylistContainer } from './playlistsStyles';
@@ -35,7 +32,7 @@ const Playlist = () => {
     { pathname } = useLocation();
 
   const { showSnackbar } = useNotifier({
-    message: 'Oooops something went wrong.',
+    message: 'Error :(',
   });
 
   useTitle(`Spotify - ${playlist.name}`);
@@ -47,12 +44,6 @@ const Playlist = () => {
 
     return () => dispatch(cleanPlaylist());
   }, [dispatch, id, pathname, userId]);
-
-  useEffect(() => {
-    if (playlist?.tracks?.items.length === 0) dispatch(getRandomTracksStart());
-    dispatch(checkUserFollowPlaylistStart({ playlistId: id, userId }));
-    dispatch(checkLikeSongStart());
-  }, [playlist, dispatch, id, userId]);
 
   useEffect(() => {
     document.documentElement.style.setProperty(
@@ -127,5 +118,4 @@ const Playlist = () => {
     </PlaylistContainer>
   );
 };
-
 export default Playlist;

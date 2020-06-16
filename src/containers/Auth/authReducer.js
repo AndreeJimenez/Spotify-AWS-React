@@ -1,11 +1,9 @@
 import * as constants from './authConstants';
-
 const initialState = {
   user: {},
   loading: true,
   error: null
 };
-
 export default (state = initialState, { type, payload }) => {
   switch (type) {
     case constants.GET_USER_START:

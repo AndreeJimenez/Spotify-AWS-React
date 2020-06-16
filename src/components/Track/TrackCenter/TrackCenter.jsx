@@ -37,5 +37,4 @@ const TrackCenter = React.forwardRef(
     );
   }
 );
-
 export default TrackCenter;

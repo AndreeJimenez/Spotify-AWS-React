@@ -2,22 +2,14 @@ import React from 'react';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import GlobalStyle from '../../globalStyles';
 import { GridContainer, SectionContainer } from './appStyles';
-// components
 import Login from '../Auth/Login';
 import User from '../User/User';
 import Dashboard from '../Dashboard/Dashboard';
 import Navbar from '../../components/Navbar/Navbar';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import Playlist from '../Playlists/Playlist';
-import LibraryPlaylists from '../Library/LibraryPlaylists';
-import Albums from '../Library/Albums';
-import Artists from '../Library/Artists';
 import Track from '../Track/Track';
 import ModalsContextContainer from '../../components/ModalsContext/ModalsContextContainer';
-
-function AppRoute({ component: Component, ...rest }) {
-  return <Route {...rest} render={props => <Component {...props} />} />;
-}
 
 export default () => (
   <BrowserRouter>
@@ -35,31 +27,17 @@ export default () => (
               '--scroll-top',
               e.target.scrollTop
             );
-          }}
-        >
+          }} >
           <Navbar />
           <Switch>
             <Route path='/' component={Login} exact />
             <Route path='/app' component={Dashboard} exact />
             <Route path='/app/user/:name' component={User} exact />
             <Route path='/app/playlist/:id' component={Playlist} exact />
-
-            <Route
-              path='/app/collection/playlists'
-              exact
-              component={LibraryPlaylists}
-            />
-            <Route path='/app/collection/albums' exact component={Albums} />
-            <Route path='/app/collection/artists' exact component={Artists} />
             <Route path='/app/collection/tracks' component={Playlist} />
             <Route
-              path='/collection/playlists'
-              component={LibraryPlaylists}
-              exact
-            />
-            <Route
               path='*'
-              component={() => <h1 style={{ color: 'red' }}>not found</h1>}
+              component={() => <h1 style={{ color: 'red' }}>NO SE ENCONTRÓ NADA PANA :(</h1>}
               exact
             />
           </Switch>

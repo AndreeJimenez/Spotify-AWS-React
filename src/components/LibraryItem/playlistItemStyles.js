@@ -20,8 +20,6 @@ export const LibraryItemsContainer = styled.ul`
       : null};
 `;
 
-// title
-
 export const SectionTitleContainer = styled.div`
   display: flex;
   align-items: center;

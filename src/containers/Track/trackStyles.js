@@ -10,6 +10,4 @@ export const TrackContainer = styled.div`
   color: #fff;
 `;
 
-// right
-
 export const PlayerRight = styled.div``;

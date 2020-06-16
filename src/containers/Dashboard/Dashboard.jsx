@@ -6,9 +6,6 @@ import { getUserStart } from '../Auth/authActions';
 import { getUserPlaylistsStart } from '../Playlists/playlistsActions';
 import {
   getRecentlyPlayedStart,
-  getRecommendationsStart,
-  getNewReleasesStart,
-  getFeaturedPlaylistsStart
 } from './dashboardActions';
 import {
   LibraryItemsContainer,
@@ -30,9 +27,6 @@ const Dashboard = () => {
 
   const {
       played,
-      recommendations,
-      featured,
-      releases,
       loading,
       error
     } = useSelector(({ dashboard }) => dashboard),
@@ -43,9 +37,6 @@ const Dashboard = () => {
     dispatch(getUserStart());
     dispatch(getUserPlaylistsStart());
     dispatch(getRecentlyPlayedStart());
-    dispatch(getRecommendationsStart());
-    dispatch(getNewReleasesStart());
-    dispatch(getFeaturedPlaylistsStart());
   }, [dispatch]);
 
   if (loading || authLoading || playlistLoading)
@@ -103,4 +94,5 @@ const Dashboard = () => {
     </>
   );
 };
+
 export default Dashboard;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import {
   PlaylistTitle,
@@ -23,7 +23,6 @@ import { ReactComponent as HeartIcon } from '../../assets/icons/heart.svg';
 import { ReactComponent as HeartOutlineIcon } from '../../assets/icons/heart-outline.svg';
 import { ReactComponent as MoreIcon } from '../../assets/icons/more.svg';
 import { ReactComponent as DefaultSong } from '../../assets/icons/defaultSong.svg';
-//import MoreMenu from '../MoreMenu/MoreMenu';
 import EmptyPlaylist from './EmptyPlaylist';
 import { useSelector } from 'react-redux';
 
@@ -37,8 +36,6 @@ const PlaylistContent = ({
   userId,
   inLibrary,
 }) => {
-  //const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false);
-  //const [moreMenuPosition, setMoreMenuPosition] = useState([0, 0]);
 
   const { likedSongs } = useSelector(({ playlists }) => playlists);
 
@@ -58,29 +55,10 @@ const PlaylistContent = ({
       }
     : { ...playlist };
 
-  /*const handleOnClickMore = e => {
-    setIsMoreMenuOpen(true);
-    setMoreMenuPosition([e.pageX, e.pageY]);
-  };*/
-
   const isMyPlaylist = playlistData?.owner?.id === userId;
 
   return (
     <>
-      {/*<MoreMenu
-        open={isMoreMenuOpen}
-        close={() => setIsMoreMenuOpen(false)}
-        moreMenuPosition={moreMenuPosition}
-        items={[
-          {
-            title: `${inLibrary ? 'Remove' : 'Add'} from your library`,
-            onClick: () => handleFollow(),
-          },
-          {
-            title: 'Copy playlist link',
-          },
-        ]}
-      />*/}
       <PlaylistLeftWrapper>
         <PlaylistHeader>
           <PlaylistHeaderSubcontainer>
@@ -142,10 +120,7 @@ const PlaylistContent = ({
                     )}
                   </IconContainer>
                 ) : null}
-                <IconContainer
-                  //onClick={handleOnClickMore}
-                  //active={isMoreMenuOpen}
-                >
+                <IconContainer>
                   <MoreIcon fill='#fff' width={20} />
                 </IconContainer>
               </PlaylistIconsWrapper>

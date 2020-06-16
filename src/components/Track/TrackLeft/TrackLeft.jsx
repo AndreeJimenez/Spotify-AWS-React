@@ -15,20 +15,15 @@ const TrackLeft = ({ song, handleChangeRoute }) => {
         src={song.cover}
         alt={song.cover}
         hasAlbum={song?.album?.id}
-        onClick={() =>
-          song?.album?.id ? handleChangeRoute(`album/${song?.album?.id}`) : null
-        }
       />
 
       <SongTextContainer>
         {song?.album?.id ? (
-          <SongName to={`/app/album/${song?.album?.id}`}>{song?.name}</SongName>
+          <SongName>{song?.name}</SongName>
         ) : (
           <SongNameText>{song?.name}</SongNameText>
         )}
-        <SongArtist
-          to={song?.artists ? `/app/artist/${song?.artists[0].id}` : ' '}
-        >
+        <SongArtist>
           {song?.artists && song?.artists[0].name}
         </SongArtist>
       </SongTextContainer>

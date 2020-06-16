@@ -88,7 +88,6 @@ export const SubTextsContainer = styled.div`
   position: relative;
 `;
 
-// ARTIST
 export const ArtistsContainer = styled.span`
   ${EllipsisOneLine}
 `;
@@ -130,7 +129,6 @@ export const AlbumContainer = styled.span`
 
 export const Album = styled(Artist)``;
 
-// options
 export const OptionButtonContainer = styled.div`
   padding: 0 2rem;
   margin-right: 1rem;
@@ -147,8 +145,6 @@ export const OptionButtonContainer = styled.div`
     `}
 `;
 
-// duration
-
 export const DurationContainer = styled.div`
   margin-left: auto;
 `;
@@ -157,7 +153,6 @@ export const Duration = styled.span`
   ${OpacityColor}
 `;
 
-// button
 export const ButtonContainer = styled.div`
   align-self: center;
   display: flex;

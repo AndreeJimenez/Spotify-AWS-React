@@ -50,7 +50,7 @@ export const NavRightWrapper = styled.div`
   align-items: center;
 `;
 
-// left
+// Izquierda
 export const ArrowsContainer = styled.div`
   display: flex;
   align-items: center;
