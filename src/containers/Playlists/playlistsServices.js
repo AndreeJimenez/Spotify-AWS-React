@@ -31,3 +31,28 @@ export const likeSong = (songId, action) =>
   );
 
 export const getUserSongs = () => api(`https://api.spotify.com/v1/me/tracks`);
+
+//AWS MÉTODOS
+
+//GET
+export const getAWSPlaylists = () =>
+  api('https://qdiov34mx3.execute-api.us-east-1.amazonaws.com/prod/api/v2/playlist');
+
+//GET BY ID
+export const getAWSPlaylist = idPlaylist =>
+  api(
+    `https://qdiov34mx3.execute-api.us-east-1.amazonaws.com/prod/api/v2/playlist/${idPlaylist}`
+  );
+//POST
+export const postAWSPlaylists = (idPlaylist, carpeta, idUser) =>
+  api('https://qdiov34mx3.execute-api.us-east-1.amazonaws.com/prod/api/v2/playlist');
+
+//PUT
+export const putAWSPlaylists = (idPlaylist, carpeta, idUser) =>
+  api(`https://qdiov34mx3.execute-api.us-east-1.amazonaws.com/prod/api/v2/playlist/${idPlaylist}`);
+
+//DELETE
+export const deleteAWSPlaylists = (idPlaylist) =>
+  api(
+    `https://qdiov34mx3.execute-api.us-east-1.amazonaws.com/prod/api/v2/playlist/${idPlaylist}`,
+  );

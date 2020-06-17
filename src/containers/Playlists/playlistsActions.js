@@ -105,3 +105,65 @@ export const checkLikeSongFailure = payload => ({
 export const cleanPlaylist = () => ({
   type: constants.CLEAN_PLAYLIST,
 });
+//AWS METODOS
+
+//GET
+export const getAWSPlaylistsStart = () => ({
+  type: constants.GET_AWS_PLAYLIST_START,
+});
+
+export const getAWSPlaylistsSuccess = payload => ({
+  type: constants.GET_AWS_PLAYLIST_SUCCESS,
+  payload,
+});
+
+export const getAWSPlaylistsFailure = payload => ({
+  type: constants.GET_AWS_PLAYLIST_FAILURE,
+  payload,
+});
+
+//PUT
+export const putAWSPlaylistsStart = () => ({
+  type: constants.PUT_AWS_PLAYLIST_START,
+});
+
+export const putAWSPlaylistsSuccess = payload => ({
+  type: constants.PUT_AWS_PLAYLIST_SUCCESS,
+  payload,
+});
+
+export const putAWSPlaylistsFailure = payload => ({
+  type: constants.PUT_AWS_PLAYLIST_FAILURE,
+  payload,
+});
+
+//DELETE
+export const deleteAWSPlaylistsStart = () => ({
+  type: constants.DELETE_AWS_PLAYLIST_START,
+});
+
+export const deleteAWSPlaylistsSuccess = payload => ({
+  type: constants.DELETE_AWS_PLAYLIST_SUCCESS,
+  payload,
+});
+
+export const deleteAWSPlaylistsFailure = payload => ({
+  type: constants.DELETE_AWS_PLAYLIST_FAILURE,
+  payload,
+});
+
+//POST
+export const postAWSPlaylistsStart = () => ({
+  type: constants.POST_AWS_PLAYLIST_START,
+}); 
+
+export const postAWSPlaylistsSuccess = payload => ({
+  type: constants.POST_AWS_PLAYLIST_SUCCESS,
+  payload,
+});
+
+export const postAWSPlaylistsFailure = payload => ({
+  type: constants.POST_AWS_PLAYLIST_FAILURE,
+  payload,
+});
+

@@ -1,15 +1,16 @@
+// ORIGINAL, NO EDITAR
 
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
-//import { ReactComponent as PlayIcon } from '../../assets/icons/play.svg';
+import { ReactComponent as PlayIcon } from '../../assets/icons/play.svg';
 import {
   LibraryPlaylistContainer,
   LibraryPlaylistCoverContainer,
   LibraryPlaylistCover,
   LibraryPlaylistTitle,
   LibraryPlaylistAuthor,
-  //LibraryPlaylistPlay,
+  LibraryPlaylistPlay,
   DefaultCover,
   LibraryPlaylistTag
 } from './playlistItemStyles';
@@ -28,13 +29,12 @@ const LibraryItem = ({
   const history = useHistory();
 
   return (
-    <LibraryPlaylistContainer /*Esto es para que la imagen se pueda clikear isClickable={!!id}*/>
-      {cover ? (       
-          <LibraryPlaylistCoverContainer cardType={cardType} type={type}>
+    <LibraryPlaylistContainer isClickable={!!id}>
+      {cover ? (
+        <LibraryPlaylistCoverContainer cardType={cardType} type={type}>
           <LibraryPlaylistCover src={cover} alt={title} type={type} />
         </LibraryPlaylistCoverContainer>
-        
-      ) : ( 
+      ) : (
         <LibraryPlaylistCoverContainer>
           <DefaultCover />
         </LibraryPlaylistCoverContainer>
@@ -51,16 +51,16 @@ const LibraryItem = ({
       )}
 
       {tag ? <LibraryPlaylistTag>{tag}</LibraryPlaylistTag> : null}
-{/* esto es para quitar el boton verde de repro
-     {isPlayable && (
+
+      {isPlayable && (
         <LibraryPlaylistPlay data-value='play' cardType={cardType}>
           <PlayIcon fill='#fff' width={cardType === 'topResult' ? 24 : 16} />
         </LibraryPlaylistPlay>
-     )}*/}
+      )}
     </LibraryPlaylistContainer>
   );
 };
-  
+
 LibraryItem.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string.isRequired,

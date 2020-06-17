@@ -84,14 +84,14 @@ const TrackItem = ({
             <PauseIcon
               height='16'
               width='16'
-              fill={isCurrentlyPlaying ? '#1ed760' : 'rgba(255, 255, 255, 1)'}
+              fill={isCurrentlyPlaying ? '#de0050' : 'rgba(255, 255, 255, 1)'}
               onClick={() => dispatch(pauseSong())}
             />
           ) : (
             <PlayIcon
               height='20'
               width='20'
-              fill={isCurrentlyPlaying ? '#1ed760' : 'rgba(255, 255, 255, 1)'}
+              fill={isCurrentlyPlaying ? '#de0050' : 'rgba(255, 255, 255, 1)'}
               onClick={handlePlay}
             />
           )}
@@ -99,7 +99,7 @@ const TrackItem = ({
           <MusicIcon
             height='20'
             width='18'
-            fill={isCurrentlyPlaying ? '#1ed760' : 'rgba(255, 255, 255, .6)'}
+            fill={isCurrentlyPlaying ? '#de0050' : 'rgba(255, 255, 255, .6)'}
           />
         </MusicIconContainer>
 

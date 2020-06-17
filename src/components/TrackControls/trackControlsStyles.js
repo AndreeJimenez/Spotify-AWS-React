@@ -57,7 +57,7 @@ export const ProgressBarContainer = styled.div`
     ${ProgressBar} {
       background-image: linear-gradient(
         to right,
-        #1db954 calc(var(--value) * calc(var(--step) * 1%)),
+        #de0050 calc(var(--value) * calc(var(--step) * 1%)),
         #404040 0
       );
 

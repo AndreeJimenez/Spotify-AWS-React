@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import LibraryItem from '../../components/LibraryItem/LibraryItem';
-//icon
-//import carpetaicon from '../../assets/images/carpeta.png';
 // redux
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserStart } from '../Auth/authActions';
@@ -22,7 +20,7 @@ const Dashboard = () => {
   const dispatch = useDispatch();
 
   const { showSnackbar } = useNotifier({
-    message: 'Algo salió mal plebe :('
+    message: 'Oooops something went wrong.'
   });
 
   useTitle('Spotify AWS');
@@ -49,7 +47,22 @@ const Dashboard = () => {
   return (
     <>
       <SectionTitleContainer>
-        <SectionTitle>RECENTLY PLAYED</SectionTitle>
+        <SectionTitle>Recently played</SectionTitle>
+      </SectionTitleContainer>
+     {/* <LibraryItemsContainer>
+        {played.map(({ track }, i) => (
+          <LibraryItem
+            key={i}
+            id={track.album.id}
+            title={track.name}
+            subtitle={track.artists[0].name}
+            cover={track.album.images[0].url}
+            type='album'
+          />
+        ))}
+      </LibraryItemsContainer>*/}
+      <SectionTitleContainer>
+        <SectionTitle>Playlist Folders</SectionTitle>
       </SectionTitleContainer>
       <LibraryItemsContainer>
         {played.map(({ track }, i) => (
@@ -64,20 +77,7 @@ const Dashboard = () => {
         ))}
       </LibraryItemsContainer>
       <SectionTitleContainer>
-        <SectionTitle>PLAYLIST FOLDERS</SectionTitle>
-      </SectionTitleContainer>
-      <LibraryItemsContainer>
-        {played.map(({ track }, i) => (
-          <LibraryItem
-            id={track.album.id}
-            title={"NOMBRE"}
-            cover={"https://lh3.googleusercontent.com/proxy/tVIYUIFjjoarjygTPZzaGyLlLb8sf4HwOxTfRR_E-AYIMkYW0m78tDL6NXewRr0O5t24_KSBcEEU8p48kjey2w2P3i1ST29AVqUHyx4qvwSEn5e8lRI"}
-            type='album'
-          />
-        ))}
-      </LibraryItemsContainer>
-      <SectionTitleContainer>
-        <SectionTitle>FAVORITE SONGS</SectionTitle>
+        <SectionTitle>Favorite Songs</SectionTitle>
       </SectionTitleContainer>
       <LibraryItemsContainer>
         {played.map(({ track }, i) => (

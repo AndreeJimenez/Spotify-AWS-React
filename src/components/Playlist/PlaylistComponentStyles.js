@@ -69,9 +69,9 @@ export const PlaylistOwner = styled.p`
 export const PlaylistButtonsContainer = styled.div`
   margin-top: 1rem;
 `;
-
+//#1db954 Old color || #de0050 Color bueno || 
 export const PlaylistPlay = styled.button`
-  background-color: #1db954;
+  background-color: #de0050;
   padding: 11px 44px;
   text-transform: uppercase;
   letter-spacing: 0.16rem;
@@ -96,7 +96,7 @@ export const PlaylistPlay = styled.button`
         `
       : null} :hover {
     transform: scale(1.06);
-    background-color: #1ed760;
+    background-color: #FF2D79;
   }
 `;
 export const PlaylistIconsWrapper = styled.div`

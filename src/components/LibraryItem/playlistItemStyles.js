@@ -35,8 +35,10 @@ export const SectionTitleContainer = styled.div`
 `;
 
 export const SectionTitle = styled.h2`
-  font-size: 28px;
-  color: #fff;
+  font-size: 25px;
+  color: #de0050;
+  margin-top: 20px;
+  
 `;
 
 export const SectionTitleSeeAll = styled.span`

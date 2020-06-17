@@ -10,7 +10,8 @@ import Sidebar from '../../components/Sidebar/Sidebar';
 import Playlist from '../Playlists/Playlist';
 import Track from '../Track/Track';
 import ModalsContextContainer from '../../components/ModalsContext/ModalsContextContainer';
-
+import info from '../../components/TeamInfo/info.jsx';
+import team from '../../components/TeamInfo/team.jsx';
 export default () => (
   <BrowserRouter>
     <GlobalStyle />
@@ -35,6 +36,8 @@ export default () => (
             <Route path='/app/user/:name' component={User} exact />
             <Route path='/app/playlist/:id' component={Playlist} exact />
             <Route path='/app/collection/tracks' component={Playlist} />
+            <Route path='/app/about' component={info} />
+            <Route path='/app/team' component={team}/>
             <Route
               path='*'
               component={() => <h1 style={{ color: 'red' }}>NO SE ENCONTRÓ NADA PANA :(</h1>}

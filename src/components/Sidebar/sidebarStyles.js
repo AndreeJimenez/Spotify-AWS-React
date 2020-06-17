@@ -12,11 +12,10 @@ export const SideContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;
-
 export const SpotifyLogo = styled.img`
-  margin: 0 0 18px 16px;
-  width: 100%;
-  max-width: 131px;
+  margin: 0 0 0px 0px;
+  width: 120%;
+  max-width: 220px;
   cursor: pointer;
 `;
 
@@ -220,3 +219,4 @@ export const PlaylistItemText = styled(NavLink)`
 export const InstallItem = styled(Item)`
   padding: 0.7rem 0.5rem 0.7rem 0;
 `;
+

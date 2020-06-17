@@ -19,9 +19,9 @@ import {
 } from './PlaylistComponentStyles';
 import TrackItem from '../../components/TrackItem/TrackItem';
 
-import { ReactComponent as HeartIcon } from '../../assets/icons/heart.svg';
-import { ReactComponent as HeartOutlineIcon } from '../../assets/icons/heart-outline.svg';
-import { ReactComponent as MoreIcon } from '../../assets/icons/more.svg';
+//import { ReactComponent as HeartIcon } from '../../assets/icons/heart.svg';
+//import { ReactComponent as HeartOutlineIcon } from '../../assets/icons/heart-outline.svg';
+//import { ReactComponent as MoreIcon } from '../../assets/icons/more.svg';
 import { ReactComponent as DefaultSong } from '../../assets/icons/defaultSong.svg';
 import EmptyPlaylist from './EmptyPlaylist';
 import { useSelector } from 'react-redux';
@@ -99,34 +99,8 @@ const PlaylistContent = ({
             >
               {isPlaying ? 'PAUSE' : 'PLAY'}
             </PlaylistPlay>
-            {!isLikedSongs ? (
-              <PlaylistIconsWrapper>
-                {!isMyPlaylist ? (
-                  <IconContainer>
-                    {following ? (
-                      <HeartIcon
-                        fill='#1db954'
-                        width={20}
-                        height={20}
-                        onClick={handleFollow}
-                      />
-                    ) : (
-                      <HeartOutlineIcon
-                        fill='#fff'
-                        width={20}
-                        height={20}
-                        onClick={handleFollow}
-                      />
-                    )}
-                  </IconContainer>
-                ) : null}
-                <IconContainer>
-                  <MoreIcon fill='#fff' width={20} />
-                </IconContainer>
-              </PlaylistIconsWrapper>
-            ) : null}
           </PlaylistButtonsContainer>
-          <PlaylistDescriptionContainer>
+                    <PlaylistDescriptionContainer>
             {!isLikedSongs ? (
               <PlaylistDescription>
                 {playlistData?.description}
@@ -134,7 +108,7 @@ const PlaylistContent = ({
             ) : null}
             <PlaylistTotalSongs>
               {playlistData?.tracks?.total ? playlistData?.tracks?.total : 0}{' '}
-              songs
+              ROLITAS
             </PlaylistTotalSongs>
           </PlaylistDescriptionContainer>
         </PlaylistHeader>

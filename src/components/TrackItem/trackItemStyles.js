@@ -76,7 +76,7 @@ export const Name = styled.h3`
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 0.015rem;
-  color: ${({ current }) => (current ? '#1ed760' : '#fff')};
+  color: ${({ current }) => (current ? '#de0050' : '#fff')};
   font-weight: 40;
   ${EllipsisOneLine}
 `;
