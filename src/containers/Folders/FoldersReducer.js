@@ -2,25 +2,20 @@ import * as constants from './FoldersConstants';
 
 const initialState = {
   list: [],
-  folder: [],
-  tracks: [],
-  randomTracks: [],
-  likedSongs: [],
-  following: false,
-  loading: true,
+  loading: false,
   error: null,
 };
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
     case constants.GET_AWS_FOLDERS_START:
-      return { ...state, loading: true, error: null };
+      return { ...state, loading: true };
 
     case constants.GET_AWS_FOLDERS_SUCCESS:
-      return { ...state, loading: false, error: null, list: payload.folders };
+      return { ...state, loading: false, list: payload.response };
 
-    case constants.CLEAN_FOLDERS:
-      return { ...state, playlist: {}, loading: true };
+    case constants.CLEAN_FOLDER:
+      return { ...state };
 
     case constants.GET_AWS_FOLDERS_FAILURE:
       return { ...state, loading: false, error: payload.error };
@@ -28,3 +23,4 @@ export default (state = initialState, { type, payload }) => {
       return state;
   }
 };
+

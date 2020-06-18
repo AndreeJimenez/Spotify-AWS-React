@@ -9,6 +9,11 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import Switch from '@material-ui/core/Switch';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Team from '../../components/Playlist/PlaylistComponentStyles.js';
+import { shadows } from '@material-ui/system';
+import {
+  PlaylistDelete
+} from '../../components/Playlist/PlaylistComponentStyles.js';
 import {
   SectionTitle
 } from '../../components/LibraryItem/playlistItemStyles';
@@ -44,26 +49,14 @@ const Sidebar = () => {
       <Link to='/app'>
        <SpotifyLogo src={"https://i.imgur.com/NH1gSsj.png"} alt='Spotify logo' />
       </Link> 
-      <img className="doge" width="50px" height="50px" src="https://media.tenor.com/images/f2d58327e91570e5205752c907d53bdc/tenor.gif"/>
-      <FormGroup>
-        <FormControlLabel
-          control={<Switch checked={checked} onChange={toggleChecked} />}
-          label="MODO DIABLO" 
-          color="#de0050"
-          size="medium"
-          className={classes.button}
-        />
-      </FormGroup>
+      <img align="center" className="doge" width="50px" height="50px" src="https://media.tenor.com/images/f2d58327e91570e5205752c907d53bdc/tenor.gif"/>
       <LibraryContainer>
         <ThemeProvider theme={theme}>
-          <Button
-              variant="contained"
-              component={NavLink}
-              to='/app/team/'
-              color='secondary'
-              className={classes.button}>          
-            <Typography variant="h5">Credits u.u</Typography>         
-            </Button>
+        <Link to='/app/team/'>
+        <PlaylistDelete boxShadow={0}>
+          Credits
+        </PlaylistDelete>
+        </Link>
   <SectionTitle>Your Playlists</SectionTitle>
         <LibraryItem gradient>
         </LibraryItem>

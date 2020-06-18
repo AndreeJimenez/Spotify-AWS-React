@@ -12,6 +12,8 @@ import Track from '../Track/Track';
 import ModalsContextContainer from '../../components/ModalsContext/ModalsContextContainer';
 import info from '../../components/TeamInfo/info.jsx';
 import team from '../../components/TeamInfo/team.jsx';
+import folderview from '../../components/TeamInfo/FolderView.jsx';
+
 export default () => (
   <BrowserRouter>
     <GlobalStyle />
@@ -38,6 +40,7 @@ export default () => (
             <Route path='/app/collection/tracks' component={Playlist} />
             <Route path='/app/about' component={info} />
             <Route path='/app/team' component={team}/>
+            <Route path='/app/team' component={folderview}/>
             <Route
               path='*'
               component={() => <h1 style={{ color: 'red' }}>NO SE ENCONTRÓ NADA PANA :(</h1>}

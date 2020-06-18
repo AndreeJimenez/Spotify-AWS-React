@@ -2,7 +2,7 @@ import * as constants from './dashboardConstants';
 
 const initialState = {
   played: [],
-  loading: true,
+  loading: false,
   error: null
 };
 

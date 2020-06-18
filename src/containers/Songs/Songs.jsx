@@ -1,13 +1,24 @@
-import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch } from 'react-redux';
-import SongsActions from "./SongsActions";
-import { GET_AWS_SONGS_START } from "./SongsConstants";
+import { useEffect, useState } from "react";
+import { useDispatch } from 'react-redux';
 
-function FavoriteSong() {
+import * as constants from './FoldersConstants';
+import * as actions from './FoldersActions';
+
+
+function Folder() {
   const dispatch = useDispatch();
-  const [favoriteSong, setFavoriteSong] = useState([]);
+  const [folder, setFolder] = useState([]);
 
   useEffect(() => {
-    dispatch(SongsActions.getAWSSongsStart());
-  });
+    if(folder.length === 0) {
+      dispatch(actions.getAWSFoldersStart());
+
+      setFolder([{}, {}]);
+      console.log(folder);
+    }
+
+    return () => dispatch(constants.CLEAN_FOLDER());
+  }, [dispatch, folder]);
 }
+
+export default Folder;

@@ -20,7 +20,7 @@ const Dashboard = () => {
   const dispatch = useDispatch();
 
   const { showSnackbar } = useNotifier({
-    message: 'Oooops something went wrong.'
+    message: 'Algo salió mal plebe :('
   });
 
   useTitle('Spotify AWS');

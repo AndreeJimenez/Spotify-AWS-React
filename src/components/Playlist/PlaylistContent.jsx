@@ -1,9 +1,14 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+import { NavLink } from 'react-router-dom';
+import Typography from '@material-ui/core/Typography';
+import makeStyles from '@material-ui/core/styles/makeStyles';
 import {
   PlaylistTitle,
   PlaylistOwner,
   PlaylistPlay,
+  PlaylistDelete,
   PlaylistTotalSongs,
   PlaylistIconsWrapper,
   PlaylistImage,
@@ -18,10 +23,6 @@ import {
   PlaylistDescription,
 } from './PlaylistComponentStyles';
 import TrackItem from '../../components/TrackItem/TrackItem';
-
-//import { ReactComponent as HeartIcon } from '../../assets/icons/heart.svg';
-//import { ReactComponent as HeartOutlineIcon } from '../../assets/icons/heart-outline.svg';
-//import { ReactComponent as MoreIcon } from '../../assets/icons/more.svg';
 import { ReactComponent as DefaultSong } from '../../assets/icons/defaultSong.svg';
 import EmptyPlaylist from './EmptyPlaylist';
 import { useSelector } from 'react-redux';
@@ -38,7 +39,13 @@ const PlaylistContent = ({
 }) => {
 
   const { likedSongs } = useSelector(({ playlists }) => playlists);
-
+  const useStyles = makeStyles(() => ({
+    button: {
+      textTransform: 'none',
+      fontFamily: 'Roboto',
+    }
+  }));
+  const classes = useStyles();
   const history = useHistory();
   const playlistData = isLikedSongs
     ? {
@@ -99,6 +106,10 @@ const PlaylistContent = ({
             >
               {isPlaying ? 'PAUSE' : 'PLAY'}
             </PlaylistPlay>
+            <PlaylistDelete
+              disabled={!playlistData?.tracks?.total} >
+              Delete u.u
+            </PlaylistDelete>
           </PlaylistButtonsContainer>
                     <PlaylistDescriptionContainer>
             {!isLikedSongs ? (
