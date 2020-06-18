@@ -56,7 +56,10 @@ export default (state = initialState, { type, payload }) => {
       return { ...state, loading: false, error: payload.error };
     default:
       return state;
+
+    
   }
+  
 };
 
 

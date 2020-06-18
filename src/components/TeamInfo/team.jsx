@@ -144,7 +144,7 @@ export default function AlignItemsList() {
         />
       </ListItem>
       <ListItem> 
-        <img width="90px" height="90px" src="https://media1.giphy.com/media/jXOxSiAx5UVnq/giphy.gif"/>
+        <img width="95px" height="90px" src="https://media1.giphy.com/media/jXOxSiAx5UVnq/giphy.gif"/>
       </ListItem>
     </List>
   );
