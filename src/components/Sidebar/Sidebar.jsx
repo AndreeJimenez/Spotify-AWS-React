@@ -1,7 +1,7 @@
-  import React from 'react'; 
+import React from 'react'; 
 import { Link } from 'react-router-dom';
 import Playlists from '../../containers/Playlists/Playlists';
-import NavLink from 'react-router-dom/NavLink';
+import { NavLink } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Typography from '@material-ui/core/Typography';
@@ -44,6 +44,7 @@ const Sidebar = () => {
       <Link to='/app'>
        <SpotifyLogo src={"https://i.imgur.com/NH1gSsj.png"} alt='Spotify logo' />
       </Link> 
+      <img className="doge" width="50px" height="50px" src="https://media.tenor.com/images/f2d58327e91570e5205752c907d53bdc/tenor.gif"/>
       <FormGroup>
         <FormControlLabel
           control={<Switch checked={checked} onChange={toggleChecked} />}

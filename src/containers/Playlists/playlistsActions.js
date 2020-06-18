@@ -105,7 +105,8 @@ export const checkLikeSongFailure = payload => ({
 export const cleanPlaylist = () => ({
   type: constants.CLEAN_PLAYLIST,
 });
-//AWS METODOS
+
+//AWS MÉTODOS
 
 //GET
 export const getAWSPlaylistsStart = () => ({

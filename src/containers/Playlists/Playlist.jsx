@@ -36,7 +36,6 @@ const Playlist = () => {
   });
 
   useTitle(`Spotify - ${playlist.name}`);
-
   useEffect(() => {
     if (!pathname.includes('/tracks')) {
       dispatch(getPlaylistStart({ id }));
@@ -44,7 +43,7 @@ const Playlist = () => {
 
     return () => dispatch(cleanPlaylist());
   }, [dispatch, id, pathname, userId]);
-
+  
   useEffect(() => {
     document.documentElement.style.setProperty(
       '--color',
@@ -54,7 +53,6 @@ const Playlist = () => {
         ? playlist.primary_color
         : '#a0c3d2'
     );
-
     return () =>
       document.documentElement.style.setProperty('--color', '#121212');
   }, [pathname, playlist]);
@@ -68,7 +66,6 @@ const Playlist = () => {
       })
     );
   };
-
   const startPlaylist = () => {
     if (isPlaying) dispatch(pauseSong());
     else {
@@ -77,7 +74,7 @@ const Playlist = () => {
       );
       dispatch(
         startSong({
-          song: {
+          song: { 
             ...playlist.tracks.items[0].track,
             cover: playlist.images
               ? playlist.images[0].url
@@ -91,7 +88,6 @@ const Playlist = () => {
     document.documentElement.style.setProperty('--color', '#121212');
     return <Loader isLoading={loading} />;
   }
-
   if (!loading && error) showSnackbar();
 
   return (

@@ -2,7 +2,7 @@ import api from '../../utils/api';
 //AWS MÉTODOS
 
 //GET
-export const getAWSSongs = () =>
+export const getAWSFolders = () =>
   api('https://kfk4cy8t0l.execute-api.us-east-1.amazonaws.com/prod/api/v2/folders');
 
 //GET BY ID

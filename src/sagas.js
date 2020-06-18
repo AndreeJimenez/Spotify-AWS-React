@@ -6,6 +6,8 @@ import dashboardSaga from './containers/Dashboard/dashboardSaga';
 import playlistsSaga from './containers/Playlists/playlistsSaga';
 import userSaga from './containers/User/userSaga';
 import trackSaga from './containers/Track/trackSaga';
+import foldersSaga from './containers/Folders/FoldersSaga';
+
 
 export default function* root() {
   yield all([
@@ -13,6 +15,7 @@ export default function* root() {
     fork(dashboardSaga),
     fork(userSaga),
     fork(playlistsSaga),
-    fork(trackSaga)
+    fork(trackSaga),
+    fork(foldersSaga)
   ]);
 }

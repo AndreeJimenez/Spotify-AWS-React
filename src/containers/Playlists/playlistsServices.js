@@ -44,11 +44,11 @@ export const getAWSPlaylist = idPlaylist =>
     `https://qdiov34mx3.execute-api.us-east-1.amazonaws.com/prod/api/v2/playlist/${idPlaylist}`
   );
 //POST
-export const postAWSPlaylists = (idPlaylist, carpeta, idUser) =>
+export const postAWSPlaylists = () =>
   api('https://qdiov34mx3.execute-api.us-east-1.amazonaws.com/prod/api/v2/playlist');
 
 //PUT
-export const putAWSPlaylists = (idPlaylist, carpeta, idUser) =>
+export const putAWSPlaylists = (idPlaylist) =>
   api(`https://qdiov34mx3.execute-api.us-east-1.amazonaws.com/prod/api/v2/playlist/${idPlaylist}`);
 
 //DELETE

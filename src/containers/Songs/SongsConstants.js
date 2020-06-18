@@ -18,3 +18,6 @@ export const PUT_AWS_SONGS_FAILURE = 'app/Songs/PUT_AWS_SONGS_FAILURE';
 export const DELETE_AWS_SONGS_START = 'app/Songs/DELETE_AWS_SONGS_START';
 export const DELETE_AWS_SONGS_SUCCESS = 'app/Songs/DELETE_AWS_SONGS_SUCCESS';
 export const DELETE_AWS_SONGS_FAILURE = 'app/Songs/DELETE_AWS_SONGS_FAILURE';
+
+export const CLEAN_PLAYLIST = 'app/Playlists/CLEAN_PLAYLIST';
+export const CLEAN_SONG = 'app/Playlists/CLEAN_SONG';
