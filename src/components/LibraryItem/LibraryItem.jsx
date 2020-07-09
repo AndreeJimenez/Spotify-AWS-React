@@ -1,15 +1,12 @@
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
-//import { ReactComponent as PlayIcon } from '../../assets/icons/play.svg';
 import {
   LibraryPlaylistContainer,
   LibraryPlaylistCoverContainer,
   LibraryPlaylistCover,
   LibraryPlaylistTitle,
   LibraryPlaylistAuthor,
-  //LibraryPlaylistPlay,
   DefaultCover,
   LibraryPlaylistTag
 } from './playlistItemStyles';
@@ -27,7 +24,7 @@ const LibraryItem = ({
   const history = useHistory();
 
   return (
-    <LibraryPlaylistContainer >/*Esto es para que la imagen se pueda clikear isClickable={!!id}*/>
+    <LibraryPlaylistContainer>
       {cover ? (       
           <LibraryPlaylistCoverContainer cardType={cardType} type={type}>
           <LibraryPlaylistCover src={cover} alt={title} type={type} />
@@ -49,4 +46,8 @@ const LibraryItem = ({
         </LibraryPlaylistAuthor>
       )}
       {tag ? <LibraryPlaylistTag>{tag}</LibraryPlaylistTag> : null}
-</LibraryPlaylistContainer>
+    </LibraryPlaylistContainer>
+  );
+}
+
+export default LibraryItem;
