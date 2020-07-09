@@ -8,7 +8,7 @@ const Playlists = () => {
     { id: userId } = useSelector(({ auth }) => auth.user);
 
   const { showSnackbar } = useNotifier({
-    message: 'Oooops something went wrong.',
+    message: 'Algo salió mal plebe :(',
   });
 
   if (!loading && error) showSnackbar();

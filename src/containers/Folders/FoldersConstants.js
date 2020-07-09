@@ -20,4 +20,4 @@ export const DELETE_AWS_FOLDERS_START = 'app/Folders/DELETE_AWS_FOLDERS_START';
 export const DELETE_AWS_FOLDERS_SUCCESS = 'app/Folders/DELETE_AWS_FOLDERS_SUCCESS';
 export const DELETE_AWS_FOLDERS_FAILURE = 'app/Folders/DELETE_AWS_FOLDERS_FAILURE';
 
-export const CLEAN_FOLDER = 'app/Folders/CLEAN_FOLDERS';
+export const CLEAN_FOLDER = 'app/Folders/CLEAN_FOLDER';

@@ -10,7 +10,6 @@ import {
 } from './playlistsActions';
 import { PlaylistContainer } from './playlistsStyles';
 import { setList, startSong, pauseSong } from '../Track/trackActions';
-
 import PlaylistContent from '../../components/Playlist/PlaylistContent';
 import Loader from '../../components/Loader/Loader';
 // hooks
@@ -43,7 +42,7 @@ const Playlist = () => {
 
     return () => dispatch(cleanPlaylist());
   }, [dispatch, id, pathname, userId]);
-  
+
   useEffect(() => {
     document.documentElement.style.setProperty(
       '--color',

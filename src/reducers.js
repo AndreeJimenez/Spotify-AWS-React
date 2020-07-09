@@ -8,6 +8,7 @@ import dashboardReducer from './containers/Dashboard/dashboardReducer';
 import userReducer from './containers/User/userReducer';
 import playlistsReducer from './containers/Playlists/playlistsReducer';
 import trackReducer from './containers/Track/trackReducer';
+import FolderReducer from './containers/Folders/FoldersReducer';
 
 const authPersistConfig = {
   key: 'auth',
@@ -27,6 +28,12 @@ const trackPersistConfig = {
   whitelist: ['song']
 };
 
+const folderPersistConfig = {
+  key: 'folder',
+  storage,
+  whitelist: ['list']
+};
+
 export default history =>
   combineReducers({
     auth: persistReducer(authPersistConfig, authReducer),
@@ -34,5 +41,6 @@ export default history =>
     user: userReducer,
     playlists: persistReducer(playlistsPersistConfig, playlistsReducer),
     track: persistReducer(trackPersistConfig, trackReducer),
+    folder: persistReducer(folderPersistConfig, FolderReducer),
     router: connectRouter(history)
   });

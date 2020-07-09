@@ -61,3 +61,6 @@ export const postAWSFoldersFailure = payload => ({
   payload,
 });
 
+export const cleanFolder = () => ({
+  type: constants.CLEAN_FOLDER,
+});

@@ -12,11 +12,9 @@ function* getUserPlaylists() {
     yield put(actions.getUserPlaylistsFailure({ error: err.message }));
   }
 }
-
 function* getUserPlaylistsSaga() {
   yield takeLatest(constants.GET_USER_PLAYLISTS_START, getUserPlaylists);
 }
-
 // playlist
 function* getPlaylist({ payload: { id } }) {
   try {

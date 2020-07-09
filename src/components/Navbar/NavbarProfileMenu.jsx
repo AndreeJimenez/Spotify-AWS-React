@@ -9,11 +9,11 @@ const NavbarProfileMenu = ({ open }) => {
   return open ? (
     <ProfileMenuContainer>
       <ProfileMenuLink href="https://open.spotify.com" target="_blank">
-        Cuenta
+        Account
       </ProfileMenuLink>
-      <ProfileMenuButton onClick={() => alert("cerrar sesión")}>
-        Cerrar Sesión
-      </ProfileMenuButton>
+      <ProfileMenuLink href="https://www.spotify.com/mx/premium/" target="_blank">
+        Switch to Premium
+      </ProfileMenuLink>
     </ProfileMenuContainer>
   ) : null;
 };

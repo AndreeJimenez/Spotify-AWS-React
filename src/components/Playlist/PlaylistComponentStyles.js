@@ -99,6 +99,35 @@ export const PlaylistPlay = styled.button`
     background-color: #FF2D79;
   }
 `;
+export const PlaylistDelete = styled.button`
+  background-color: #de0050;
+  padding: 11px 44px;
+  text-transform: uppercase;
+  letter-spacing: 0.16rem;
+  font-size: 11px;
+  font-weight: 900;
+  min-width: 125px;
+  line-height: 1.6;
+  user-select: none;
+  border: 0;
+  border-radius: 100px;
+  transition-property: all;
+  color: #fff;
+  outline: 0;
+  cursor: pointer;
+  transition: all 33ms cubic-bezier(0.3, 0, 0, 1);
+
+  ${({ disabled }) =>
+    disabled
+      ? css`
+          pointer-events: none;
+          opacity: 0.35;
+        `
+      : null} :hover {
+    transform: scale(1.06);
+    background-color: #FF2D79;
+  }
+`;
 export const PlaylistIconsWrapper = styled.div`
   display: flex;
   align-items: center;
